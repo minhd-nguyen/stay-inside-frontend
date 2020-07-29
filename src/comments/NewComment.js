@@ -5,13 +5,17 @@ import { Button } from 'react-bootstrap';
 import Toast from 'react-bootstrap/Toast'
 import ToastHeader from 'react-bootstrap/ToastHeader'
 
+
+
 export default function NewComment(props) {
   let [commentCreated, setCreatedComment] = useState(false)
   let [inputs, setInputs] = useState({
-    name: '',
-    content: '',
+    name: props.user.name,
+    content: "",
+    postedBy: props.user.id,
+    eventId: props.id
   })
-
+console.log(props.id)
 
   let commentSubmit = e => {
     e.preventDefault()
@@ -41,10 +45,17 @@ export default function NewComment(props) {
               <input hidden type="text" name='eventId' class="form-control" id="exampleFormControlInput1" value={props.id} onChange={handleInputChange} />
             </div>
             <strong className="mr-auto"> 
+<<<<<<< HEAD
                 <div class="form-group">
                   <label for="exampleFormControlInput1">Name</label>
                   <input type="text" name='name' class="form-control" id="exampleFormControlInput1" onChange={handleInputChange} />
                 </div>
+=======
+                {/* <div class="form-group">
+                  <label for="exampleFormControlInput1">Name</label>
+                  <input hidden type="text" name='postedBy' value={props.user.id} class="form-control" id="exampleFormControlInput1" onChange={handleInputChange} />
+                </div> */}
+>>>>>>> 03e788dff1b659419dcace057d51587d6808fd51
                 <div class="form-group">
                   <label for="exampleFormControlTextarea1">Comment</label>
                   <input type="text" name='content' class="form-control" id="exampleFormControlInput1" onChange={handleInputChange} />
