@@ -45,17 +45,10 @@ console.log(props.id)
               <input hidden type="text" name='eventId' class="form-control" id="exampleFormControlInput1" value={props.id} onChange={handleInputChange} />
             </div>
             <strong className="mr-auto"> 
-<<<<<<< HEAD
-                <div class="form-group">
-                  <label for="exampleFormControlInput1">Name</label>
-                  <input type="text" name='name' class="form-control" id="exampleFormControlInput1" onChange={handleInputChange} />
-                </div>
-=======
                 {/* <div class="form-group">
                   <label for="exampleFormControlInput1">Name</label>
                   <input hidden type="text" name='postedBy' value={props.user.id} class="form-control" id="exampleFormControlInput1" onChange={handleInputChange} />
                 </div> */}
->>>>>>> 03e788dff1b659419dcace057d51587d6808fd51
                 <div class="form-group">
                   <label for="exampleFormControlTextarea1">Comment</label>
                   <input type="text" name='content' class="form-control" id="exampleFormControlInput1" onChange={handleInputChange} />
