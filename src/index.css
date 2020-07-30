@@ -9,9 +9,10 @@ li {
 
 
 .about {
-  width: 90vw;
+  width: 100%;
   text-align: center;
   margin-bottom: 50px;
+  align-items: center;
 }
 
 .aboutPage {
