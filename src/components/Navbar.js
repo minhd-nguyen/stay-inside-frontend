@@ -6,6 +6,7 @@ const Navbar = (props) => {
 
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary ">
       <div className="container">
+        <img className="logo" src="images/stayInside.png" />
         <Link className="navbar-brand" to="/"></Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon">
