@@ -1,18 +1,57 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Recursive', sans-serif;
 }
+
+.jumboText {
+  line-height: 2em;
+}
+
+.loginJumbo {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.loginBox{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.loginCard {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* .masterDiv {
+  width: 100%;
+  text-align: center;
+  justify-items: center;
+  justify-content: center;
+  justify-self: center;
+} */
+
+/* .content {
+  text-align: center;
+  text-align: center;
+  justify-items: center;
+  justify-content: center;
+  justify-self: center;
+} */
 
 li {
   list-style: none;
 }
 
-
 .about {
   width: 100%;
   text-align: center;
   margin-bottom: 50px;
+<<<<<<< HEAD
   align-items: center;
+=======
+  margin: 0 auto;
+>>>>>>> d70099785cee78906aa419dedd3315aeadde979d
 }
 
 .aboutPage {
@@ -154,6 +193,14 @@ footer {
   height: 100%;
   width: 100%;
   margin-bottom: 100px
+}
+
+.profile-event-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .profile-event-title {
