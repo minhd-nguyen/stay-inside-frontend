@@ -10,9 +10,9 @@ export default function NewComment(props) {
   })
 
   let handleUpdateComment = e => {
-    window.location.reload(); 
+    // window.location.reload(); 
     e.preventDefault()
-      axios.put(`http://localhost:3000/comments/${props.id}`, inputs)
+      axios.put(`${process.env.REACT_APP_API}/comments/${props.id}`, inputs)
       .then(response => {
           console.log(response)
           setUpdateComment(true)
