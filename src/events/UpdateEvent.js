@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Card, Button } from 'react-bootstrap'
 import { FormGroup, Label, Input } from 'reactstrap';
+import { Redirect } from 'react-router-dom';
 
 // import { Redirect } from 'react-router-dom'
 
@@ -23,6 +24,7 @@ const CreateEvent = (props) => {
         console.log(updateEventInputs)
         // window.location.reload()
         axios.put(`${process.env.REACT_APP_API}/events/${props.id}`, updateEventInputs)
+
             .then(response => {
                 if (response.status === 200) {
                     setUpdateEventCreated(true)
@@ -39,6 +41,7 @@ const CreateEvent = (props) => {
         e.persist()
         setUpdateEventInputs({ ...updateEventInputs, [e.target.name]: e.target.value })
     }
+
 
     return (
         <Card className="mx-auto">
@@ -86,5 +89,7 @@ const CreateEvent = (props) => {
         </Card>
     )
 }
+
+
 
 export default CreateEvent
