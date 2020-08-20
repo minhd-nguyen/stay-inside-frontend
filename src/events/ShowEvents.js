@@ -9,29 +9,29 @@ import { Card } from 'react-bootstrap'
 export default function ShowEvents(props) {
   let [events, setEvents] = useState([])
 
-  useEffect(()=>{
+  useEffect(() => {
     axios.get(`${process.env.REACT_APP_API}/events`, events)
-    .then(response => {
+      .then(response => {
         setEvents(response.data)
         console.log(response)
-    })
-    .catch(err => {
-      console.log('☠️☠️☠️☠️☠️☠️')
-      console.log(err)
-    })
+      })
+      .catch(err => {
+        console.log('☠️☠️☠️☠️☠️☠️')
+        console.log(err)
+      })
     console.log('call the server for bounties!')
   }, [])
 
 
-  console.log("🎲")   
+  console.log("🎲")
   console.log(props.user)
-    
+
   return (
     <ul>
       {events.map((event, i) => (
         <li key={i} className='event-container'>
           <ListEvent event={event} user={props.user} />
-        </li>   
+        </li>
       ))}
     </ul>
   )
